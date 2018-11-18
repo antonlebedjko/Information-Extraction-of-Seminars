@@ -1,5 +1,5 @@
 import re
-untagged_email_file = open('seminars_untagged/untagged/301.txt', "r")
+untagged_email_file = open('seminars_untagged/untagged/315.txt', "r")
 
 
 def emailToString(email_file):
@@ -17,25 +17,68 @@ def emailToList(email):
         #email.close()
         return email_list
 
+#tagging the end of event times. If we want to tag all time appereances in the text, we should run our endTimeTagger before startTimeTagger, they deppend from each other
+def endTimeTagger(email_list):
+    # converting string with a whole email to list
+    email_list = email_list.split('\n')
+    # empty string to append a whole email with tags
+    updated_email = ''
+    # different patterns, need to evaluate to choose the best one in the end
+    pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
+    pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3}')
+    for line in email_list:
+        if (not "PostedBy" in line):
+            matches = pattern.finditer((line))
+            # to check if there are any time patterns in a line
+            condition = (len(list(matches)) == 0)
+            if (condition):
+                updated_email += line + '\n'
+            else:
+                matches = pattern.finditer((line))
+                start = 0
+                end = 0
+                for match in matches:
+                    matchStart = match.start() + start
+                    matchEnd = match.end() + end
+                    line = line[0:matchStart] + "<etime>" + line[matchStart:matchEnd] + "</etime>" + line[matchEnd:]
+                    start += 15 #if we have more than one match in out matches array, we need to update the next match starting index, because we appended extra characters to the string
+                    end += 22 #same with the match end index
+                updated_email += line + '\n'
+        else:
+            updated_email += line + '\n'
+    return updated_email
 
-#taging time using regular expression
-def timeTagger(email_list):
+#tagging the start of event times or just any other times in the email, which potentially should also be the starting times. Before calling this method, we should call endTimeTagger, otherwise we will tag the <etime> as <stime>
+def startTimeTagger(email_list):
+        #converting string with a whole email to list
+        email_list = email_list.split('\n')
         #empty string to append a whole email with tags
         updated_email = ''
-        pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
+        #different patterns, need to evaluate to choose the best one in the end
+        pattern = re.compile('([0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
+        pattern = re.compile(r'(\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b)(?!\<\/etime)')
+        pattern = re.compile('([0-9]{1,2}?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
+        pattern = re.compile(r'(\[0-9]+:[0-9][0-9]|[0-9]+:[0-9][0-9] +[APap]\.?[mM])(?!\<\/etime)')
         for line in email_list:
                 if(not "PostedBy" in line):                                      
                         matches = pattern.finditer((line))
                         #to check if there are any time patterns in a line
                         condition = (len(list(matches))==0)
+                        # to check if there are any time patterns in a line
                         if (condition):
                                 updated_email += line + '\n'
                         else:
                                 matches = pattern.finditer((line))
-                                for match in matches:                                       
-                                        line = line[0:match.start()] + "<stime>" + line[match.start():match.end()] + "</stime>" + line[match.end():]
-                                        updated_email += line +'\n'
-                else :
+                                start = 0
+                                end = 0
+                                for match in matches:
+                                    matchStart = match.start() + start
+                                    matchEnd = match.end() + end
+                                    line = line[0:matchStart] + "<stime>" + line[matchStart:matchEnd] + "</stime>" + line[matchEnd:]
+                                    start += 15  # if we have more than one match in out matches array, we need to update the next match starting index, because we appended extra characters to the string
+                                    end += 22  # same with the match end index
+                                updated_email += line +'\n'
+                else:
                        updated_email += line + '\n'
         return updated_email
 
@@ -55,14 +98,12 @@ def paragraphsTagger(text):
 
 
 
-
 def main():
-      initial_email = emailToString(untagged_email_file) 
-      untagged_email_file.close()
-      email_with_paragraphs = paragraphsTagger(initial_email)
-      email_with_paragraphs_to_list = email_with_paragraphs.split('\n')
-      email_with_times = timeTagger(email_with_paragraphs_to_list)
-      print(email_with_times)
+        initial_email = emailToString(untagged_email_file)
+        untagged_email_file.close()
+        emailAfterEndTimeTagger = endTimeTagger(initial_email)
+        print(startTimeTagger(emailAfterEndTimeTagger))
+
 
 main()
 
@@ -70,26 +111,6 @@ main()
 
 
 
-
-
-
-"""
-
-def main():
-        email_list = emailToList(untagged_email_file)
-        text = timeTagger(email_list)
-        #print(timeTagger(email_list))
-        print(email_list)
-        #print(paragraphsTagger(text))
-        tagged_times = timeTagger(email_list)
-        tagged_email = open("tagged_email.txt", "w")
-        for c in tagged_times:
-                tagged_email.write(c)
-
-
-        tagged_email.close()
-
-"""
 
 
 
