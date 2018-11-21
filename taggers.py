@@ -1,5 +1,5 @@
 import re
-untagged_email_file = open('seminars_untagged/untagged/312.txt', "r")
+untagged_email_file = open('seminars_untagged/untagged/363.txt', "r")
 
 #helper function to convert a file with an email to a string
 def email_to_string(email_file):
@@ -98,7 +98,7 @@ def sentences_tagger(email):
             paragraph = match.group(1)
             if paragraph:                
                 #pattern for finding the sentences in each paragraph
-                sentence_pattern = re.compile(r'([A-Z][^\.!?]*[\.!?])')
+                sentence_pattern = re.compile(r'(([A-Z][^\.!?]*)(?=[\.!?]))')
                 sentences_matches = sentence_pattern.finditer(paragraph)
                 for sentence_match in sentences_matches:
                         sentence = sentence_match.group()                     
