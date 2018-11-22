@@ -31,7 +31,6 @@ def end_time_tagger(email):
                 matches = pattern.finditer((line))
                 for match in matches:
                     end_time = match.group()
-                    print(end_time)
                     if end_time:
                         line = line.replace(end_time.strip(), "<etime>" + end_time.strip() + "</etime>")
                 updated_email += line + '\n'
@@ -40,10 +39,11 @@ def end_time_tagger(email):
     return updated_email
 
 
-#tagging the start of event times or just any other times in the email, which potentially should also be the starting times. Before calling this method, we should call endTimeTagger, otherwise we will tag the <etime> as <stime>
-def start_time_tagger(email_list):
-        #converting string with a whole email to list
-        email_list = email_list.split('\n')
+#tagging the start of event times or just any other times in the email, which potentially should also be the starting times.
+#Before calling this method, we should call endTimeTagger, otherwise we will tag the <etime> as <stime>, because out pattern checks first of all which times are not already tagged as <etime>
+def start_time_tagger(email):
+        #converting string with a whole email to a list
+        email_list = email.split('\n')
         #empty string to append a whole email with tags
         updated_email = ''
         #different patterns, need to evaluate to choose the best one in the end
@@ -61,15 +61,9 @@ def start_time_tagger(email_list):
                                 updated_email += line + '\n'
                         else:
                                 matches = pattern.finditer((line))
-                                #because we append to the same string, if we have several matches at the same time, we need to track how many characters we have already appended before that. So, we increase start and end everytime when we add the new tags
-                                start = 0
-                                end = 0
                                 for match in matches:
-                                    match_start = match.start() + start
-                                    match_end = match.end() + end
-                                    line = line[0:match_start] + "<stime>" + line[match_start:match_end ] + "</stime>" + line[match_end :]
-                                    start += 15  # if we have more than one match in out matches array, we need to update the next match starting index, because we appended extra characters to the string
-                                    end += 22  # same with the match end index
+                                    start_time = match.group()
+                                    line = line.replace(start_time.strip(), "<stime>" + start_time.strip() + "</stime>")
                                 updated_email += line +'\n'
                 else:
                        updated_email += line + '\n'
