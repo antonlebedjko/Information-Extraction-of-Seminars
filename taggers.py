@@ -18,7 +18,7 @@ def end_time_tagger(email):
     # different patterns, need to evaluate to choose the best one in the end
     pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
     pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p\.m\.|p.m|P.M]{2,3}')
-    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)|))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
+    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
     #<etime>- 5:00 PM</etime> need to fix this problem with minus
     for line in email_list:
         if (not "PostedBy" in line):
