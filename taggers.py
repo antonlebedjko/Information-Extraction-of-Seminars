@@ -1,5 +1,5 @@
 import re
-untagged_email_file = open('seminars_untagged/untagged/312.txt', "r")
+untagged_email_file = open('seminars_untagged/untagged/333.txt', "r")
 
 #helper function to convert a file with an email to a string
 def email_to_string(email_file):
@@ -18,7 +18,7 @@ def end_time_tagger(email):
     # different patterns, need to evaluate to choose the best one in the end
     pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
     pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p\.m\.|p.m|P.M]{2,3}')
-    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
+    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)|))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
     #<etime>- 5:00 PM</etime> need to fix this problem with minus
     for line in email_list:
         if (not "PostedBy" in line):
@@ -94,7 +94,7 @@ def sentences_tagger(email):
                 for sentence_match in sentences_matches:                       
                         sentence = sentence_match.group()   
                         #to actually tag a sentences, not initials which may appear in a text
-                        if(len(sentence)>1):                                         
+                        if(len(sentence)>3):                                         
                                 email = email.replace(sentence, "<sentence>" + sentence + "</sentence>")
         return email.strip()
         
@@ -141,17 +141,3 @@ def location_tagger(email):
         except:
                 pass
         return email.strip()
-
-
-def main():
-        initial_email = email_to_string(untagged_email_file)
-        untagged_email_file.close()       
-        emailAfterParagraphTagger = paragraphs_tagger(initial_email)
-        emailAfterSentencesTagger = sentences_tagger(emailAfterParagraphTagger)
-        emailAfterEndTimeTagger = end_time_tagger(emailAfterSentencesTagger)        
-        emailAfterStartTimeTagger = start_time_tagger(emailAfterEndTimeTagger)
-        email_after_speaker_tagger = speaker_tagger(emailAfterStartTimeTagger)
-        email_after_location_tagger = location_tagger(email_after_speaker_tagger)
-        print(email_after_location_tagger)
-
-main()
