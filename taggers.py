@@ -1,14 +1,6 @@
 import re
 untagged_email_file = open('seminars_untagged/untagged/333.txt', "r")
 
-#helper function to convert a file with an email to a string
-def email_to_string(email_file):
-        email = ''
-        for ch in email_file:
-                email+= ch
-        return email
-
-
 #tagging the end of event times. If we want to tag all time appereances in the text, we should run our endTimeTagger before startTimeTagger, they deppend from each other
 def end_time_tagger(email):
     # converting string with a whole email to a list

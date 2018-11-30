@@ -1,7 +1,5 @@
 import re
-from tagging import main
-test_tagged_email_file = open('test_tagged/303.txt', "r")
-#helper function to convert a file with an email to a string
+
 def email_to_string(email_file):
         email = ''
         for ch in email_file:
@@ -10,11 +8,11 @@ def email_to_string(email_file):
 
 def extract(email, starting_tag, closing_tag):      
         set_of_matches = set()
-        pattern = re.compile(starting_tag + '(.*?)' + closing_tag)
-        stimes_matches = pattern.finditer(email)
-        for match in stimes_matches:
-            stime = match.group(1)          
-            if stime:                 
+        pattern = re.compile(starting_tag + '([\d\D]*?)' + closing_tag)
+        matches = pattern.finditer(email)       
+        for match in matches:             
+            stime = match.group(1)                     
+            if stime:                   
                 set_of_matches.add(stime)
         return set_of_matches
 
@@ -38,12 +36,23 @@ def evaluate(testing_set, tagged_by_me_set):
         else:
             return (0,0,0)
 
-def mainEvaluate():
+
+def evaluate_one_email(test_email_file, tagged_by_me_email):
+    test_tagged_email_file = open(test_email_file, "r")
     initial_email = email_to_string(test_tagged_email_file)
     test_tagged_email_file.close()
-    test_set = extract(initial_email, '<stime>', '</stime')
-    tagged_set = extract(main(), '<stime>', '</stime')
-    print("Test taggs: ",test_set)
-    print("Tagged by me: ", tagged_set)
-    print("Evaluation: ", evaluate(test_set, tagged_set ))
-mainEvaluate()
+    tagged_by_me_email_file = open(tagged_by_me_email, "r")
+    my_email = email_to_string(tagged_by_me_email_file)
+    tagged_by_me_email_file.close()
+    array_of_opening_tags = ['<stime>', '<etime>', '<speaker>', '<location>', '<sentence>', '<paragraph>']
+    array_of_closing_tags = ['</stime>', '</etime>', '</speaker>', '</location>', '</sentence>', '</paragraph>']
+    for i in range(0, len(array_of_opening_tags)):
+        test_set = extract(initial_email, array_of_opening_tags[i], array_of_closing_tags[i])
+        tagged_by_me_set = extract(my_email, array_of_opening_tags[i], array_of_closing_tags[i])
+        print("Test taggs: ",test_set)
+        print("Tagged by me: ", tagged_by_me_set)
+        initial_email = remove_tags(initial_email, array_of_opening_tags[i], array_of_closing_tags[i])
+        my_email = remove_tags(my_email, array_of_opening_tags[i], array_of_closing_tags[i])        
+        print("Evaluation: ", evaluate(test_set, tagged_by_me_set ))
+
+evaluate_one_email('test_tagged/301.txt', 'tagged_by_my_code/301.txt')
