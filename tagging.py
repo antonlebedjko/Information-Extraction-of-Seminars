@@ -21,7 +21,7 @@ def tag_one_email(email_file):
         return email_after_location_tagger
 
 def tag_all_emails():
-        for i in range(301, 331):
+        for i in range(335, 341):
                 out = open('tagged_by_my_code/' +str(i) + '.txt', "w")
                 out.write(tag_one_email('seminars_untagged/untagged/' +str(i) + '.txt'))
                 out.close()
