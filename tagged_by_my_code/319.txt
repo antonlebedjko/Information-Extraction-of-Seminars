@@ -17,7 +17,7 @@ Abstract:
  Title:    ON CHOOSING THE BEST FEEDBACK CONTROL STRATEGY FOR
  	  A ROBOTIC MANIPULATOR
  Date: 	  March 1, 1991
- Time:     <stime>3:30 p.m</stime>. until <etime>4:30 p.m</etime>.
+ Time:     <stime>3:30 p.m</stime>. until <etime><stime>4:30</stime> p.m</etime>.
  Location: <location>Baker Hall, Adamson Wing</location>
  Host:     Michael Erdmann, x7883
 
@@ -35,7 +35,7 @@ controller gains which result in the best possible performance for specified
 actuator constraints</sentence>.</paragraph>
 
 ----------
-Refreshments will be served from 3:15-3:30.  
-Discussion and questions:  4:30-5:00.
+Refreshments will be served from <stime>3:15</stime>-<etime><stime>3:30</stime>.</etime>  
+Discussion and questions:  <stime>4:30</stime>-<etime><stime>5:00</stime>.</etime>
 Everyone in the CMU community is invited to attend.
 ----------

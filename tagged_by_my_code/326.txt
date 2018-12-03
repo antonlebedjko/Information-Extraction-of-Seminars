@@ -15,7 +15,7 @@ Abstract:
            Engineering, Cornell University
  Title:    Control Strategies for Intermittent Dynamic Tasks
  Date:	  April 26, 1991
- Time:     <stime>3:30 p.m</stime>. until <etime>4:30 p.m</etime>.
+ Time:     <stime>3:30 p.m</stime>. until <etime><stime>4:30</stime> p.m</etime>.
  Location: <location>Baker Hall, Adamson Wing</location>
  Host:     Michael Erdmann, x7883
 
@@ -38,7 +38,7 @@ decomposes the problem along the degrees of freedom of the mechanism,
 and Martin Buhler's use of a "mirror" algorithm for juggling</sentence>.</paragraph>
 
 ----------
-Refreshments will be served from 3:15-3:30.  
-Discussion and questions:  4:30-5:00.
+Refreshments will be served from <stime>3:15</stime>-<etime><stime>3:30</stime>.</etime>  
+Discussion and questions:  <stime>4:30</stime>-<etime><stime>5:00</stime>.</etime>
 Everyone in the CMU community is invited to attend.
 ----------

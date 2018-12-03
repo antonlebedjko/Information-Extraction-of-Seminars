@@ -2,7 +2,7 @@
 Type:     cmu.cs.robotics
 Topic:    Upcoming Robotics Seminars: Apr 14 none; Apr 21 Shree Nayar.
 Dates:    21-Apr-95
-Time:     3:30 - 5:00
+Time:     <stime>3:30</stime> - <etime>5:00</etime>
 Host:     Katsushi Ikeuchi, x8-6349
 PostedBy: me on 13-Apr-95 at 03:24 from H.GP.CS.CMU.EDU (Michael Erdmann)
 Abstract: 
@@ -12,8 +12,8 @@ Next Friday's seminar will be:
 ------------------------------------------------------------------------------
 			   ROBOTICS SEMINAR
 
-Friday April 21, 3:30-5:00
-Refreshments 3:15
+Friday April 21, <stime>3:30</stime>-<etime>5:00</etime>
+Refreshments <stime>3:15</stime>
 Adamson Wing, Baker Hall
 	           Real-Time Focus Range Sensor
 		   ----------------------------

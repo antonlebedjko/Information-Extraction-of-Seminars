@@ -14,7 +14,7 @@ Abstract:
  Who:      <speaker>Jerome Feldman, ICSI and UC Berkeley</speaker>
  Topic:    pSather 1.0 - A Simpler Second System
  Dates:    7-Dec-94
- Time:     1 p.m.
+ Time:     <stime>1 p.m</stime>.
  Place:    <location>4615A Wean Hall</location>
  Duration: 1 1/2 hours
  Host:     Jon A Webb 

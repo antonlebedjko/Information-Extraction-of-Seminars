@@ -3,14 +3,14 @@ Type:     cmu.cs.robotics
 Who:      <speaker>Professor Reuven Karni, Technion Institute of Technology</speaker>
 Topic:    Exploring the autonomous learning problem with mathematical programming
 Dates:    12-Feb-91
-Time:     1:30 <etime>- 2:30 PM</etime>
+Time:     <stime>1:30</stime> - <etime><stime>2:30</stime> PM</etime>
 PostedBy: Marianne.Thomas on 12-Feb-91 at 09:39 from ISL1.RI.CMU.EDU
 Abstract: 
 
 
  Speaker: <speaker>Professor Reuven Karni, Technion Institute of Technology</speaker>
  Topic:	Exploring the autonomous learning problem with mathematical programming
- When: Tuesday February 12, 1991, 1:30-2:30pm,  Doherty Hall 3313
+ When: Tuesday February 12, 1991, <stime>1:30</stime>-<etime>2:30pm</etime>,  Doherty Hall 3313
 The autonomous learning problem (ALP) is defined as: A series of training
 examples is provided, characterized by a conjunction of specific values of a
 set of common attributes, and a class to which it belongs.  The goal is to

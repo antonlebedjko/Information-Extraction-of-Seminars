@@ -15,7 +15,7 @@ Abstract:
                 IBM T. J. Watson Research Center
         Title:  Medical Robotics: A Step Toward Computer Integrated Medicine
          Date:  March 22, 1991
-         Time:  <stime>3:30 p.m</stime>. until <etime>4:30 p.m</etime>.
+         Time:  <stime>3:30 p.m</stime>. until <etime><stime>4:30</stime> p.m</etime>.
      Location:  <location>Baker Hall, Adamson Wing</location>
          Host:  Michael Erdmann, x7883
  Appointments:  L.R.Adkins-Shellie@cs
@@ -53,8 +53,8 @@ examples drawn from our own research on precise orthopaedic surgery and from
 that of other researchers</sentence>.</paragraph>
 
 ----------
-Refreshments will be served from 3:15-3:30.  
-Discussion and questions:  4:30-5:00.
+Refreshments will be served from <stime>3:15</stime>-<etime><stime>3:30</stime>.</etime>  
+Discussion and questions:  <stime>4:30</stime>-<etime><stime>5:00</stime>.</etime>
 Everyone in the CMU community is invited to attend.
 ----------
 FurtherDetails:    L.R.Adkins-Shellie@cs

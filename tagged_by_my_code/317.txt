@@ -2,7 +2,7 @@
 Type:     cmu.cs.robotics
 Topic:    TODAY *ROOM CHANGE*  Anita Flynn's Talk (Faculty Candidate): Smith 125.
 Dates:    7-Apr-95
-Time:     3:30 - 5:00
+Time:     <stime>3:30</stime> - <etime>5:00</etime>
 PostedBy: me on 7-Apr-95 at 15:54 from H.GP.CS.CMU.EDU (Michael Erdmann)
 Abstract: 
 Friends, 
@@ -12,8 +12,8 @@ number of other folks for helping out with the sudden switch.  Best, Mike
 ------------------------------------------------------------------------------
        Robotics Seminar     FACULTY CANDIDATE    Robotics Seminar
 
-Friday April 7, 3:30-5:00
-Refreshments 3:15
+Friday April 7, <stime>3:30</stime>-<etime>5:00</etime>
+Refreshments <stime>3:15</stime>
 ******* Smith Hall 125 *******    (NOTE ROOM CHANGE)
                 Piezoelectric Ultrasonic Micromotors
 

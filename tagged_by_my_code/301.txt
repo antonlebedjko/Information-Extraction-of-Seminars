@@ -16,7 +16,7 @@ Abstract:
 
  WHO:  <speaker>Ramesh Bollapragada, Graduate student, GSIA/Robotics Program</speaker>
  WHERE: <location>4623 WEAN HALL</location>
- WHEN: Friday, Oct 7 at 1pm
+ WHEN: Friday, Oct 7 at <stime>1pm</stime>
 
  TITLE: AN ASYNCHRONOUS TEAM SOLUTION TO SCHEDULING STEEL PLANTS
         IN DIRECT HOT CHARGE MODE

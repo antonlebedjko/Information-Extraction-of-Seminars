@@ -5,14 +5,14 @@ Who:      <speaker>Simon Penny</speaker>
           Carnegie Mellon University
 Topic:    Autonomous Interactive Artwork  
 Dates:    31-Mar-95
-Time:     <stime>3:30 PM</stime> <etime>- 5:00 PM</etime>
+Time:     <stime>3:30 PM</stime> - <etime><stime>5:00</stime> PM</etime>
 Place:    <location>ADAMSON WING Auditorium in Baker Hall</location>
 PostedBy: baraff on 28-Mar-95 at 13:20 from TURNOVER.GRAPHICS.CS.CMU.EDU
 Abstract: 
 
                        RI SEMINAR
 
- WHEN:     Friday, March 31, 1995; <stime>3:30 pm</stime> <etime>- 5:00 pm</etime>
+ WHEN:     Friday, March 31, 1995; <stime>3:30 pm</stime> - <etime><stime>5:00</stime> pm</etime>
           Refreshments will be served starting at <stime>3:15 pm</stime>.
 
  WHERE:    <location>ADAMSON WING Auditorium in Baker Hall</location>

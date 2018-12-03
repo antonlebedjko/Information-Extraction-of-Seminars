@@ -2,7 +2,7 @@
 Type:     cmu.cs.robotics
 Topic:    AI Seminar Next Tuesday
 Dates:    19-Mar-91
-Time:     3:30 - 5:00
+Time:     <stime>3:30</stime> - <etime>5:00</etime>
 Host:     Dave Touretzky                      Appointments: Cary.Lund@cs, x3853
 PostedBy: Jeffrey.Schlimmer on 14-Mar-91 at 08:48 from A.GP.CS.CMU.EDU
 Abstract: 
@@ -16,7 +16,7 @@ Carnegie Mellon                                              SCS AI Seminar
    TABLETOP: A COMPUTER MODEL OF HIGH-LEVEL PERCEPTION AND ANALOGY-MAKING
 
 			  Tuesday, 19 March 1991
-			    3:30-5:00 WeH 5409
+			    <stime>3:30</stime>-<etime>5:00</etime> WeH 5409
     Tabletop applies a probabilistic, emergent architecture to a relatively
 simple domain that nonetheless has a "real world" feel to it.  The Tabletop
 domain consists of a table on which there are a number of ordinary table

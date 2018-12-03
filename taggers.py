@@ -8,10 +8,10 @@ def end_time_tagger(email):
     # empty string to append a whole email with tags
     updated_email = ''
     # different patterns, need to evaluate to choose the best one in the end
-    pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
-    pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p\.m\.|p.m|P.M]{2,3}')
-    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
-    #<etime>- 5:00 PM</etime> need to fix this problem with minus
+    #pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
+    #pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p\.m\.|p.m|P.M]{2,3}')
+    #pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
+    pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9]{1,2}?\:[0-9][0-9][ ]{0,1}[am|AM|pm|PM|a.m|A.M|p.m|P.M|\n|\s]{0,3}')
     for line in email_list:
         if (not "PostedBy" in line):
             matches = pattern.finditer((line))
@@ -24,6 +24,9 @@ def end_time_tagger(email):
                 for match in matches:
                     end_time = match.group()
                     if end_time:
+                        end_time = end_time.strip()
+                        if(end_time[0] == '-'):
+                                end_time = end_time[1:]
                         line = line.replace(end_time.strip(), "<etime>" + end_time.strip() + "</etime>")
                 updated_email += line + '\n'
         else:
@@ -39,10 +42,10 @@ def start_time_tagger(email):
         #empty string to append a whole email with tags
         updated_email = ''
         #different patterns, need to evaluate to choose the best one in the end
-        pattern = re.compile('([0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
+        #pattern = re.compile('([0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
+        #pattern = re.compile('([0-9]{1,2}?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
+        #pattern = re.compile(r'(\[0-9]+:[0-9][0-9]|[0-9]+:[0-9][0-9] +[APap]\.?[mM])(?!\<\/etime)')
         pattern = re.compile(r'(\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b)(?!\<\/etime)')
-        pattern = re.compile('([0-9]{1,2}?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
-        pattern = re.compile(r'(\[0-9]+:[0-9][0-9]|[0-9]+:[0-9][0-9] +[APap]\.?[mM])(?!\<\/etime)')
         for line in email_list:
                 if(not "PostedBy" in line):                                      
                         matches = pattern.finditer((line))
