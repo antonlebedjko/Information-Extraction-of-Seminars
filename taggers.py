@@ -1,5 +1,10 @@
 import re
-untagged_email_file = open('seminars_untagged/untagged/333.txt', "r")
+
+def names_to_string(file):
+    names = ''
+    for ch in file:
+        names += ch
+    return names
 
 #tagging the end of event times. If we want to tag all time appereances in the text, we should run our endTimeTagger before startTimeTagger, they deppend from each other
 def end_time_tagger(email):
@@ -7,10 +12,6 @@ def end_time_tagger(email):
     email_list = email.split('\n')
     # empty string to append a whole email with tags
     updated_email = ''
-    # different patterns, need to evaluate to choose the best one in the end
-    #pattern = re.compile(r'\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b')
-    #pattern = re.compile('[ ]([-]|(?:-|until))[ ][0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p\.m\.|p.m|P.M]{2,3}')
-    #pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M|]{2,3}')
     pattern = re.compile('([ ]{0,1})([-]|(?:-|(?<=until)))([ ]{0,1})[0-9]{1,2}?\:[0-9][0-9][ ]{0,1}[am|AM|pm|PM|a.m|A.M|p.m|P.M|\n|\s]{0,3}')
     for line in email_list:
         if (not "PostedBy" in line):
@@ -41,10 +42,6 @@ def start_time_tagger(email):
         email_list = email.split('\n')
         #empty string to append a whole email with tags
         updated_email = ''
-        #different patterns, need to evaluate to choose the best one in the end
-        #pattern = re.compile('([0-9][0-9]?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
-        #pattern = re.compile('([0-9]{1,2}?\:[0-9][0-9][ ][am|AM|pm|PM|a.m|A.M|p.m|P.M]{2,3})(?!\<\/etime)')
-        #pattern = re.compile(r'(\[0-9]+:[0-9][0-9]|[0-9]+:[0-9][0-9] +[APap]\.?[mM])(?!\<\/etime)')
         pattern = re.compile(r'(\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b)(?!\<\/etime)')
         for line in email_list:
                 if(not "PostedBy" in line):                                      
@@ -102,9 +99,27 @@ def speaker_tagger(email):
         pattern = re.compile(r'(?<=who:)(.*)(?=\n)', flags=re.IGNORECASE)
         try:
                 match = pattern.findall(email)
-                #if there is a "Who:" field, it means we found a speaker
+                #if there is a "Who:" field, it means that there should be a speaker after that
                 if(len(match)>0):
-                        speaker = match[0]                       
+                        speaker = match[0]
+                        speaker = "".join(speaker.split(",")) #delete all commas
+                        # split all words to a list, so we can extract only a name, not everything in case if there are more than 2 words in a sting
+                        words = speaker.split()
+                        if(len(words)>2):
+                            print (words)
+                            male_names = open('names-male.txt', "r")
+                            m_names = names_to_string(male_names)
+                            male_names.close()
+                            for i in range(0, len(words)):
+                                #if we see Dr or Professor + proper name + another word
+                                if(len(words) - i >=3 and (words[i] == 'Dr.' or words[i] == 'Professor') and words[i+1] in m_names):
+                                    speaker = words[i] + " " + words[i + 1] + " " + words[i+2]
+                                    break;
+                                #if we see proper name + another word
+                                elif (len(words) - i >=2 and words[i] in m_names):
+                                    speaker = words[i] + " " + words[i+1]
+                                    break;
+
                         found_who = True
                         #check for all appereances of the speaker in the whole email. If there are, we tag all of them
                         email = re.sub(speaker.strip(), "<speaker>" + speaker.strip() + "</speaker>", email)

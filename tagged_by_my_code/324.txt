@@ -1,6 +1,6 @@
 <0.22.3.91.10.35.24.L.R.Adkins-Shellie@B.GP.CS.CMU.EDU.0>
 Type:     cmu.cs.robotics
-Who:      <speaker>Russell H. Taylor</speaker>
+Who:      <speaker>Russell H.</speaker> Taylor
           IBM T. J. Watson Research Center
 Topic:    Medical Robotics: A Step Toward Computer Integrated Medicine
 Dates:    22-Mar-91
@@ -11,7 +11,7 @@ PostedBy: L.R.Adkins-Shellie on 22-Mar-91 at 10:35 from B.GP.CS.CMU.EDU
 Abstract: 
 
 
-      Speaker:  <speaker>Russell H. Taylor</speaker>
+      Speaker:  <speaker>Russell H.</speaker> Taylor
                 IBM T. J. Watson Research Center
         Title:  Medical Robotics: A Step Toward Computer Integrated Medicine
          Date:  March 22, 1991

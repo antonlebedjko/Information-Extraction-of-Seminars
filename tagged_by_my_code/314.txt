@@ -1,6 +1,6 @@
 <0.1.3.95.09.55.01.plp+@HOSTESS.GRAPHICS.CS.CMU.EDU (Phyllis Pomerantz).0>
 Type:     AI Seminar
-Who:      <speaker>Oren Etzioni / University of Washington</speaker>
+Who:      <speaker>Oren Etzioni</speaker> / University of Washington
 Topic:    Learning to Understand Information on the Internet.
 Dates:    7-Mar-95
 Time:     <stime>3:30 PM</stime>
@@ -11,7 +11,7 @@ PostedBy: plp+ on 1-Mar-95 at 09:55 from HOSTESS.GRAPHICS.CS.CMU.EDU (Phyllis Po
 Abstract: 
 
  Type:     AI Seminar
- Who:      <speaker>Oren Etzioni / University of Washington</speaker>
+ Who:      <speaker>Oren Etzioni</speaker> / University of Washington
  Topic:    Learning to Understand Information on the Internet.
  Dates:    7-Mar-95
  Time:     <stime>3:30 p.m</stime>.

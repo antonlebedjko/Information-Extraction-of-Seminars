@@ -1,6 +1,6 @@
 <0.6.10.94.16.54.13.maa+@ISL1.RI.CMU.EDU (Michelle Agie).0>
 Type:     cmu.cs.robotics
-Who:      <speaker>Ramesh Bollapragada, Graduate student, GSIA/Robotics Program</speaker>
+Who:      <speaker>Ramesh Bollapragada</speaker>, Graduate student, GSIA/Robotics Program
 Topic:    AN ASYNCHRONOUS TEAM SOLUTION TO SCHEDULING STEEL PLANTS
           IN DIRECT HOT CHARGE MODE
 Dates:    7-Oct-94
@@ -14,7 +14,7 @@ Abstract:
 
                           CIMDS SEMINAR
 
- WHO:  <speaker>Ramesh Bollapragada, Graduate student, GSIA/Robotics Program</speaker>
+ WHO:  <speaker>Ramesh Bollapragada</speaker>, Graduate student, GSIA/Robotics Program
  WHERE: <location>4623 WEAN HALL</location>
  WHEN: Friday, Oct 7 at <stime>1pm</stime>
 

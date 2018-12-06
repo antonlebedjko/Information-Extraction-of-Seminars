@@ -59,7 +59,7 @@ def evaluation_on_one_email(initial_email, email_tagged_by_my_code):
     return precision_sum, recall_sum, f_measure_sum
 
 def evaluation_on_all_emails():
-    for i in range(301, 326):
+    for i in range(301, 324):
         test_tagged_email_file = open('test_tagged/'+str(i)+'.txt', "r")
         initial_email = email_to_string(test_tagged_email_file)
         test_tagged_email_file.close()

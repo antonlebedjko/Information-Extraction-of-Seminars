@@ -1,6 +1,6 @@
 <0.8.3.91.13.57.20.L.R.Adkins-Shellie@B.GP.CS.CMU.EDU.0>
 Type:     cmu.cs.robotics
-Who:      <speaker>Dinesh K. Pai, Department of Computer Science, Cornell University</speaker>
+Who:      Dinesh K. Pai, Department of Computer Science, Cornell University
 Topic:    Programming Complex Mechanical Systems with Applications 
           to Dynamic Walking
 Dates:    8-Mar-91
@@ -11,7 +11,7 @@ PostedBy: L.R.Adkins-Shellie on 8-Mar-91 at 13:57 from B.GP.CS.CMU.EDU
 Abstract: 
 
 
- Speaker:  <speaker>Dinesh K. Pai, Department of Computer Science, Cornell University</speaker>
+ Speaker:  Dinesh K. Pai, Department of Computer Science, Cornell University
  Title:    Programming Complex Mechanical Systems with Applications 
  	  to Dynamic Walking
  Date:	  Friday, March 8, 1991

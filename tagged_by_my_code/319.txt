@@ -1,6 +1,6 @@
 <0.26.2.91.15.41.45.L.R.Adkins-Shellie@B.GP.CS.CMU.EDU.0>
 Type:     cmu.cs.robotics
-Who:      <speaker>Assistant Professor Subhas Desa,</speaker> 
+Who:      <speaker>Assistant Professor Subhas Desa</speaker>, 
           Department of Mechanical Engineering, Carnegie Mellon University
 Topic:    ON CHOOSING THE BEST FEEDBACK CONTROL STRATEGY FOR
           A ROBOTIC MANIPULATOR
@@ -12,7 +12,7 @@ PostedBy: L.R.Adkins-Shellie on 26-Feb-91 at 15:41 from B.GP.CS.CMU.EDU
 Abstract: 
 
 
- Speaker:  <speaker>Assistant Professor Subhas Desa,</speaker> 
+ Speaker:  <speaker>Assistant Professor Subhas Desa</speaker>, 
  	  Department of Mechanical Engineering, Carnegie Mellon University
  Title:    ON CHOOSING THE BEST FEEDBACK CONTROL STRATEGY FOR
  	  A ROBOTIC MANIPULATOR
