@@ -5,7 +5,7 @@ Who:      <speaker>Tony Stentz</speaker>
           Carnegie Mellon University
 Topic:    The D* Algorithm for Real-Time Path Replanning
 Dates:    4-Nov-94
-Time:     <stime>3:30 PM</stime> - <etime><stime>5:00</stime> PM</etime>
+Time:     <stime>3:30 PM</stime> - <etime>5:00 PM</etime>
 Place:    <location>ADAMSON WING Auditorium in Baker Hall</location>
 Host:     Yangsheng Xu (xu+@cs.cmu.edu)
 PostedBy: xu+ on 28-Oct-94 at 17:08 from IUS4.IUS.CS.CMU.EDU (Yangsheng Xu)
@@ -14,7 +14,7 @@ Abstract:
 
                        RI SEMINAR
 
- WHEN:   Friday, Nov. 4, 1994; <stime>3:30 pm</stime> - <etime><stime>5:00</stime> pm</etime>
+ WHEN:   Friday, Nov. 4, 1994; <stime>3:30 pm</stime> - <etime>5:00 pm</etime>
         Refreshments will be served starting at <stime>3:15 pm</stime>
 
  WHERE:  <location>ADAMSON WING Auditorium in Baker Hall</location>

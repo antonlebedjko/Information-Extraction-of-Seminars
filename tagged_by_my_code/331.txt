@@ -3,7 +3,7 @@ Type:     cmu.cs.robotics
 Who:      <speaker>Milind Tambe</speaker>
 Topic:    CIMDS SEMINAR
 Dates:    4-Oct-91
-Time:     <stime>12:00 PM</stime> <etime>- 1:00 PM</etime>
+Time:     <stime>12:00 PM</stime> - <etime>1:00 PM</etime>
 Place:    <location>3313 Doherty (Large Conf Room)</location>
 PostedBy: maa+ on 02-Oct-91 at 11:44 from ISL1.RI.CMU.EDU (Michelle Agie)
 Abstract: 
@@ -13,7 +13,7 @@ Abstract:
 
  DATE: Friday Oct 4, 1991
 
- TIME: 12:00pm - 1:00pm
+ TIME: <stime>12:00pm</stime> - <etime>1:00pm</etime>
 
  Place:  <location>3313 Doherty (Large Conf Room)</location>
 

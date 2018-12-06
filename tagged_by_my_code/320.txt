@@ -5,7 +5,7 @@ Who:      <speaker>Dr. Kishan Baheti</speaker>
 Topic:    Control and Manufacturing Research and Education Programs
           at the National Science Foundation
 Dates:    5-May-95
-Time:     <stime>3:30 PM</stime> - <etime><stime>5:00</stime> PM</etime>
+Time:     <stime>3:30 PM</stime> - <etime>5:00 PM</etime>
 Place:    <location>ADAMSON WING Auditorium in Baker Hall</location>
 PostedBy: baraff on 2-May-95 at 19:21 from TURNOVER.GRAPHICS.CS.CMU.EDU
 Abstract: 
@@ -17,7 +17,7 @@ on a first-come/first-serve basis</sentence>.</paragraph>
 ----------------------------------------------------------
                        RI SEMINAR
 
- WHEN:     Friday, May 5, 1995; <stime>3:30 pm</stime> - <etime><stime>5:00</stime> pm</etime>
+ WHEN:     Friday, May 5, 1995; <stime>3:30 pm</stime> - <etime>5:00 pm</etime>
           Refreshments will be served starting at <stime>3:15 pm</stime>.
 
  WHERE:    <location>ADAMSON WING Auditorium in Baker Hall</location>

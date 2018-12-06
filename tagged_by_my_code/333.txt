@@ -1,8 +1,8 @@
 <0.11.10.91.01.39.11.me@H.GP.CS.CMU.EDU (Michael Erdmann).0>
 Type:     cmu.cs.robotics
-Topic:    Robotics Seminar, Prof. John Canny, Friday Oct 11, 3:30, <location>Adamson Wing, Baker Hall</location>
+Topic:    Robotics Seminar, Prof. John Canny, Friday Oct 11, <stime>3:30</stime>, <location>Adamson Wing, Baker Hall</location>
 Dates:    11-Oct-91
-Time:     3:30
+Time:     <stime>3:30</stime>
 Place:    <location>Adamson Wing, Baker Hall</location>
 PostedBy: me on 11-Oct-91 at 01:39 from H.GP.CS.CMU.EDU (Michael Erdmann)
 Abstract: 
@@ -13,7 +13,7 @@ Abstract:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Date:    11-Oct-91
-   Time:    3:30 (Refreshments at 3:15)
+   Time:    <stime>3:30</stime> (Refreshments at <stime>3:15</stime>)
    Place:   <location>Adamson Wing, Baker Hall</location>
 
 			    RISC-Robotics

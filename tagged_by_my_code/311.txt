@@ -3,7 +3,7 @@ Type:     cmu.cs.robotics
 Who:      <speaker>Professor Reuven Karni</speaker>, Technion Institute of Technology
 Topic:    Exploring the autonomous learning problem with mathematical programming
 Dates:    12-Feb-91
-Time:     <stime>1:30</stime> - <etime><stime>2:30</stime> PM</etime>
+Time:     <stime>1:30</stime> - <etime>2:30 PM</etime>
 PostedBy: Marianne.Thomas on 12-Feb-91 at 09:39 from ISL1.RI.CMU.EDU
 Abstract: 
 

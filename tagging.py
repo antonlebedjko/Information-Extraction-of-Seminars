@@ -9,7 +9,6 @@ def email_to_string(email_file):
 
 def tag_one_email(email_file):
         untagged_email_file = open(email_file, "r")
-        #untagged_email_file = open('seminars_untagged/untagged/303.txt', "r")
         initial_email = email_to_string(untagged_email_file)
         untagged_email_file.close()       
         email_after_paragraph_tagger = paragraphs_tagger(initial_email)
@@ -21,7 +20,7 @@ def tag_one_email(email_file):
         return email_after_location_tagger
 
 def tag_all_emails():
-        for i in range(319, 325):
+        for i in range(301, 315):
                 out = open('tagged_by_my_code/' +str(i) + '.txt', "w")
                 out.write(tag_one_email('seminars_untagged/untagged/' +str(i) + '.txt'))
                 out.close()

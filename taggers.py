@@ -42,7 +42,9 @@ def start_time_tagger(email):
         email_list = email.split('\n')
         #empty string to append a whole email with tags
         updated_email = ''
-        pattern = re.compile(r'(\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b)(?!\<\/etime)')
+        pattern = re.compile(r'((?<!<etime>)(\b([0-9]{1,2}(?::[0-9]{2}\s?(?:AM|PM|am|pm|a\.m|p\.m)|:[0-9]{2}|\s?(?:AM|PM|am|pm|a\.m|p\.m)))\b)(?!\<\/etime>))')
+
+        #pattern = re.compile(r'(?<!<etime>)\b((1[0-2]|0?[1-9])((:[0-5][0-9])?)(\s?)([AaPp](\.?)[Mm])|(1[0-2]|0?[1-9])(:[0-5][0-9])){1}(?!\<\/etime>)')
         for line in email_list:
                 if(not "PostedBy" in line):                                      
                         matches = pattern.finditer((line))
@@ -106,17 +108,19 @@ def speaker_tagger(email):
                         # split all words to a list, so we can extract only a name, not everything in case if there are more than 2 words in a sting
                         words = speaker.split()
                         if(len(words)>2):
-                            print (words)
                             male_names = open('names-male.txt', "r")
                             m_names = names_to_string(male_names)
                             male_names.close()
+                            female_names = open('names-female.txt', "r")
+                            f_names = names_to_string(female_names)
+                            female_names.close()
                             for i in range(0, len(words)):
-                                #if we see Dr or Professor + proper name + another word
-                                if(len(words) - i >=3 and (words[i] == 'Dr.' or words[i] == 'Professor') and words[i+1] in m_names):
+                                #if we see Dr or Professor plus there are two more words after
+                                if(len(words) - i >=3 and (words[i] == 'Dr.' or words[i] == 'Professor')):
                                     speaker = words[i] + " " + words[i + 1] + " " + words[i+2]
                                     break;
                                 #if we see proper name + another word
-                                elif (len(words) - i >=2 and words[i] in m_names):
+                                elif (len(words) - i >=2 and (words[i] in m_names or words[i] in f_names)):
                                     speaker = words[i] + " " + words[i+1]
                                     break;
 
@@ -124,8 +128,14 @@ def speaker_tagger(email):
                         #check for all appereances of the speaker in the whole email. If there are, we tag all of them
                         email = re.sub(speaker.strip(), "<speaker>" + speaker.strip() + "</speaker>", email)
                 if not found_who:
-                        #Use POS and wiki here
-                        print("no2")
+                        #pattern for Dr. or Professor and two words after that
+                        speaker_pattern = re.compile(r'(Professor|Dr\.)\s\w+\s\w+')
+                        speaker_matches = speaker_pattern.finditer(email)
+                        for speaker_match in speaker_matches:
+                            sp = speaker_match.group()
+                            if sp:
+                                email = email.replace(sp, "<speaker>" + sp + "</speaker>")
+
         except:
                 pass
         return email.strip()

@@ -5,14 +5,14 @@ Who:      <speaker>Jeff Schneider</speaker>
           Robotics Institute
 Topic:    Robot Skill Learning Through Intelligent Experimentation
 Dates:    24-Feb-95
-Time:     <stime>3:30 PM</stime> - <etime><stime>5:00</stime> PM</etime>
+Time:     <stime>3:30 PM</stime> - <etime>5:00 PM</etime>
 Place:    <location>ADAMSON WING Auditorium in Baker Hall</location>
 PostedBy: baraff on 20-Feb-95 at 14:10 from TURNOVER.GRAPHICS.CS.CMU.EDU
 Abstract: 
 
                        RI SEMINAR
 
- WHEN:     Friday, February 24, 1995; <stime>3:30 pm</stime> - <etime><stime>5:00</stime> pm</etime>
+ WHEN:     Friday, February 24, 1995; <stime>3:30 pm</stime> - <etime>5:00 pm</etime>
           Refreshments will be served starting at <stime>3:15 pm</stime>.
 
  WHERE:    <location>ADAMSON WING Auditorium in Baker Hall</location>
