@@ -1,15 +1,15 @@
-ontology_tree = {
+my_ontology_tree = {
 
     'Science & Enginnering School': {
                 'Computer Science': ['software', 'object-oriented', 'architecture', 'design', 'product', 'development', 
                                          'artificial', 'intelligence', 'machine learning', 'ai', 'robotics', 'vision',
-                                         'nlp', 'natural language processing', 'ieee', 'navigation', 'robot',
-                                         'humanoid', 'autonomous', 'knowledge', 'language', 'decision', 'recognition',
-                                         'classification', 'prediction'],
+                                         'nlp', 'navigation', 'robot', 'algorithm', 'data','parallel', 'distributed', 'network', 'synchronization', 'efficient',
+                                         'humanoid', 'autonomous', 'automation', 'decision', 'recognition','synchronous', 'asynchronous', 'thread', 'multi',
+                                         'classification', 'prediction', 'ibm', 'design', 'hci','interface', 'render',  'framework', 'programming', 'robotics', 'computer_program'],
 
 
-                'Biology': ['bio', 'disease', 'immune', 'immunomodulation', 'biological', 'genome',
-                                     'biochemistry', 'molecules', 'medicine', 'clinic', 'cancer', 'health'],
+                'Biology': ['bio', 'disease', 'immune', 'immunomodulation', 'biological', 'genome','genetics','bioscience','microbiology',
+                                     'biochemistry', 'molecules', 'medicine', 'clinic', 'cancer', 'health', 'ecology'],
                 
 
                 'Chemistry': ['chemistry', 'drugs', 'polymers', 'graft', 'extruders', 'nanotechnology',
@@ -17,32 +17,33 @@ ontology_tree = {
                                      'dissolved'],
                 
 
-                'Electronics': ['semiconductor', 'electronic', 'circuit', 'integrated'],
+                'Electronics': ['semiconductor', 'electronic', 'circuit', 'integrated', 'electron', 'electricity', 'transistor', 'signal', 'amplifier'],
                 
 
-                'Physics': ['physics', 'thermodynamics', 'nanotechnology', 'magnetism', 'frequency',
-                                     'nuclear'],            
+                'Physics': ['physics', 'thermodynamic', 'nanotechnology', 'magnetism', 'frequency', 'mechanic', 'astronomy', 'thermodynamics'
+                                     'nuclear', 'aeronautics'],            
     },
     'Arts School': {
                 'Politics': ['politics', 'social', 'public', 'policy', 'issue', 'environment', 'trend',
                                      'economy', 'media', 'global', 'regulations', 'international', 'crisis',
                                      'activist', 'prospects', 'welfare', 'community', 'movement'],
 
-                'Languages': ['language', 'phonology', 'english', 'writing'],
+                'Languages': ['language', 'phonology', 'english', 'writing', 'linguist', 'linguistic'],
 
-                'Performing Arts': ['music', 'genre', 'ensemble', 'classical', 'theater']
+                'Performing Arts': ['music', 'genre', 'ensemble', 'classical', 'theater', 'ceramics', 'drawing', 
+                                'ikebana', 'illumination', 'music', 'sculpture']
     },
     
     'Business School': {
-                    'Finance' : ['finance', 'stock', 'exchange', 'money', 'investment', 'trader', 'bank', 'trend']
+                    'Finance' : ['finance', 'stock', 'exchange', 'money', 'cash', 'investment', 'trader', 'bank', 
+                                'trend', 'invest', 'euro', 'dollar', 'gbp', 'assets', 'business', 'economic', 'banking', 'commerce',
+                                'funds', 'pay', 'bankroll']
+    },
+    'Other':{
+                  
     }
+
     
 
 }
 
-print(ontology_tree['Arts School']['Languages'])
-
-filtered_word_list = word_list[:] #make a copy of the word_list
-for word in word_list: # iterate over word_list
-  if word in stopwords.words('english'): 
-    filtered_word_list.remove(word) # remove word from filtered_word_list if it is a stopword

@@ -1,0 +1,17 @@
+<0.18.2.94.09.58.49.trg+@N3.SP.CS.CMU.EDU (Thomas Gross).0>
+Type:     cmu.cs.scs
+Topic:    CS/PSC Seminar today @ <stime>4:00</stime> G. Miller WeH 5409
+Dates:    18-Feb-94
+Time:     <stime>4:00</stime>
+PostedBy: trg+ on 18-Feb-94 at 09:58 from N3.SP.CS.CMU.EDU (Thomas Gross)
+Abstract: 
+
+<paragraph>
+	Computer Systems/Pittsburgh Supercomputing Center Seminar</paragraph>
+
+<paragraph>			Gary Miller
+		Carnegie Mellon University
+		School of Computer Science
+	"Numeric and Combinatorial Aspects to Parallel Scientific Computation"</paragraph>
+
+	     Friday, Feb 18, 1994 at <stime>4:00 p.m</stime>. in WeH 5409
