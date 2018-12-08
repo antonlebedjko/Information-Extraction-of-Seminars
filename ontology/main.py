@@ -1,3 +1,9 @@
+'''
+What this class does, is: is opens all the emails which have been tagged by
+taggers written by me. It uses the ontology class which does ontology for one email,
+but it runs methods from it on all of the emails here. In the end, it prints the
+ontology results for all of the departments.
+'''
 from ontology import *
 
 def main():
