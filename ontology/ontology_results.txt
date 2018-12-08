@@ -1,0 +1,221 @@
+Science & Enginnering School :  
+  
+            Computer Science :     
+  
+                                301.txt 
+                                302.txt 
+                                303.txt 
+                                305.txt 
+                                306.txt 
+                                307.txt 
+                                308.txt 
+                                309.txt 
+                                310.txt 
+                                311.txt 
+                                312.txt 
+                                313.txt 
+                                314.txt 
+                                315.txt 
+                                317.txt 
+                                318.txt 
+                                319.txt 
+                                320.txt 
+                                321.txt 
+                                322.txt 
+                                323.txt 
+                                324.txt 
+                                325.txt 
+                                328.txt 
+                                329.txt 
+                                330.txt 
+                                331.txt 
+                                332.txt 
+                                333.txt 
+                                334.txt 
+                                335.txt 
+                                336.txt 
+                                337.txt 
+                                338.txt 
+                                339.txt 
+                                340.txt 
+                                342.txt 
+                                343.txt 
+                                344.txt 
+                                345.txt 
+                                346.txt 
+                                347.txt 
+                                348.txt 
+                                349.txt 
+                                350.txt 
+                                351.txt 
+                                352.txt 
+                                353.txt 
+                                354.txt 
+                                356.txt 
+                                357.txt 
+                                359.txt 
+                                360.txt 
+                                361.txt 
+                                362.txt 
+                                363.txt 
+                                364.txt 
+                                365.txt 
+                                366.txt 
+                                367.txt 
+                                368.txt 
+                                369.txt 
+                                370.txt 
+                                371.txt 
+                                373.txt 
+                                374.txt 
+                                375.txt 
+                                376.txt 
+                                377.txt 
+                                378.txt 
+                                379.txt 
+                                381.txt 
+                                382.txt 
+                                383.txt 
+                                384.txt 
+                                386.txt 
+                                387.txt 
+                                388.txt 
+                                390.txt 
+                                391.txt 
+                                392.txt 
+                                393.txt 
+                                395.txt 
+                                396.txt 
+                                399.txt 
+                                400.txt 
+                                402.txt 
+                                403.txt 
+                                404.txt 
+                                406.txt 
+                                407.txt 
+                                408.txt 
+                                409.txt 
+                                410.txt 
+                                414.txt 
+                                415.txt 
+                                416.txt 
+                                417.txt 
+                                418.txt 
+                                419.txt 
+                                420.txt 
+                                421.txt 
+                                422.txt 
+                                424.txt 
+                                425.txt 
+                                426.txt 
+                                427.txt 
+                                428.txt 
+                                429.txt 
+                                432.txt 
+                                434.txt 
+                                435.txt 
+                                436.txt 
+                                437.txt 
+                                439.txt 
+                                440.txt 
+                                441.txt 
+                                447.txt 
+                                448.txt 
+                                449.txt 
+                                450.txt 
+                                451.txt 
+                                452.txt 
+                                454.txt 
+                                455.txt 
+                                456.txt 
+                                457.txt 
+                                458.txt 
+                                459.txt 
+                                461.txt 
+                                462.txt 
+                                464.txt 
+                                467.txt 
+                                468.txt 
+                                469.txt 
+                                470.txt 
+                                471.txt 
+                                472.txt 
+                                473.txt 
+                                474.txt 
+                                476.txt 
+                                477.txt 
+                                478.txt 
+                                480.txt 
+                                481.txt 
+                                482.txt 
+                                483.txt 
+                                484.txt 
+  
+            Physics :     
+  
+            Chemistry : 
+            
+            Electronics :     
+  
+            Biology :     
+
+  
+Arts School :  
+  
+            Languages :     
+  
+                                389.txt 
+  
+            Politics :     
+  
+                                304.txt 
+                                316.txt 
+                                327.txt 
+                                341.txt 
+                                385.txt 
+                                398.txt 
+                                401.txt 
+                                405.txt 
+                                411.txt 
+                                412.txt 
+                                413.txt 
+                                431.txt 
+                                433.txt 
+                                438.txt 
+                                453.txt 
+                                460.txt 
+                                463.txt 
+                                465.txt 
+                                466.txt 
+                                475.txt 
+                                479.txt 
+  
+            Performing Arts :     
+  
+  
+  
+  
+Business School :  
+  
+            Finance :     
+  
+                                355.txt 
+                                380.txt 
+                                394.txt 
+                                423.txt 
+                                430.txt 
+                                442.txt 
+                                
+ Other :  
+  
+            Other :     
+  
+                                326.txt 
+                                358.txt 
+                                372.txt 
+                                397.txt 
+                                443.txt 
+                                444.txt 
+                                445.txt 
+                                446.txt 
+                                485.txt 
