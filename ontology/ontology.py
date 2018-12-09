@@ -3,7 +3,7 @@ because these don't contain any information that can be relevent for ontology.
 After that, it deletes any other tags which are left, but not what it's inside them.
 We tokenize an email. We remove the stop words (like the, an, a...).
 We remove any words that have only 1 or 2 chars in them. After we cleaned everything, 
-what is no needed,we find the most 25 poplar words in an email (in case if email,
+what is no needed,we lemmatize an email and find the most 25 poplar words in an email (in case if email,
 doen't have 25 words, we will take as many as we can). We use wordnet to get all
 the synonims of these 25 post popular words. After we have a lot of synonims, we
 compare and count them with a specific words for each department, which are in our
